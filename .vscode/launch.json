@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Gastos: listar despesas",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gastos",
+      "args": ["--arquivo", "${workspaceFolder}/.gastos.json", "list"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Gastos: adicionar despesa de exemplo",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gastos",
+      "args": ["--arquivo", "${workspaceFolder}/.gastos.json", "add", "Almoço", "25,90", "-c", "comida"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Gastos: resumo por categoria",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "gastos",
+      "args": ["--arquivo", "${workspaceFolder}/.gastos.json", "summary"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Gastos: rodar testes",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "unittest",
+      "args": ["-v"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}
